@@ -189,22 +189,22 @@ One of the benefits of using Express is that once our foundation is established,
 
 - Open `server/index.js`
 - Write an endpoint that will:
-_ use the `GET` method
-_ has a path that uses a `parameter` called `id`
-_ Remember, this parameter will give us access to `req.params` in our handler
-_ The path should be `/api/products`
-_ To tell the path to expect a parameter, append `/:id` to the end
-_ We'll use it to capture a specific id for one of our products
-_ The handler should be required from a file called `getProduct.js`
-_ Remember to require the `products.json` file so it's in scope
-_ It should use `req.params` to find the item with the matching `id` in our products array
-_ If the item is in the array, send it back to the client
-_ If it is not in the array, it should send a status of 500 with a message `Item not in list`
-_ Note: `req.params` will be a string and the id we're checking against is a number
-_ Test the endpoint in your browser by entering `http://localhost:[your-port]/api/products/2`
-_ It should print the content from the item with an id of 2 from our dataset
-_ Try it with an id that doesn't exist (1334)
-_ It should print `Item not in list` to the screen
+  - use the `GET` method
+  - has a path that uses a `parameter` called `id`
+    - Remember, this parameter will give us access to `req.params` in our handler
+  - The path should be `/api/products`
+    - To tell the path to expect a parameter, append `/:id` to the end
+      - We'll use it to capture a specific id for one of our products
+  - The handler should be required from a file called `getProduct.js`
+    - Remember to require the `products.json` file so it's in scope
+  - It should use `req.params` to find the item with the matching `id` in our products array
+    - If the item is in the array, send it back to the client
+    - If it is not in the array, it should send a status of 500 with a message `Item not in list`
+    - Note: `req.params` will be a string and the id we're checking against is a number
+  - Test the endpoint in your browser by entering `http://localhost:[your-port]/api/products/2`
+      - It should print the content from the item with an id of 2 from our dataset
+      - Try it with an id that doesn't exist (1334)
+        - It should print `Item not in list` to the screen
 <details>
 
 <summary><code> server/index.js </code></summary>
